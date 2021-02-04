@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>实现文本按照一定高度展开与收起 | DQ-Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="A website for front-end article.">
+    <link rel="preload" href="/front-end-blog/assets/css/0.styles.b6831af5.css" as="style"><link rel="preload" href="/front-end-blog/assets/js/app.bfa69435.js" as="script"><link rel="preload" href="/front-end-blog/assets/js/2.a2a73526.js" as="script"><link rel="preload" href="/front-end-blog/assets/js/25.54af57a1.js" as="script"><link rel="prefetch" href="/front-end-blog/assets/js/10.8ee4114d.js"><link rel="prefetch" href="/front-end-blog/assets/js/11.db04297d.js"><link rel="prefetch" href="/front-end-blog/assets/js/12.a0d5bdc7.js"><link rel="prefetch" href="/front-end-blog/assets/js/13.26a407d8.js"><link rel="prefetch" href="/front-end-blog/assets/js/14.c827638d.js"><link rel="prefetch" href="/front-end-blog/assets/js/15.e229e0ed.js"><link rel="prefetch" href="/front-end-blog/assets/js/16.85c86eb6.js"><link rel="prefetch" href="/front-end-blog/assets/js/17.e437605a.js"><link rel="prefetch" href="/front-end-blog/assets/js/18.b09af370.js"><link rel="prefetch" href="/front-end-blog/assets/js/19.1ce4b80b.js"><link rel="prefetch" href="/front-end-blog/assets/js/20.60920552.js"><link rel="prefetch" href="/front-end-blog/assets/js/21.a7b23cc0.js"><link rel="prefetch" href="/front-end-blog/assets/js/22.37d0720c.js"><link rel="prefetch" href="/front-end-blog/assets/js/23.3d28f8cb.js"><link rel="prefetch" href="/front-end-blog/assets/js/24.2581a37d.js"><link rel="prefetch" href="/front-end-blog/assets/js/26.338de9ba.js"><link rel="prefetch" href="/front-end-blog/assets/js/27.31fc6c1b.js"><link rel="prefetch" href="/front-end-blog/assets/js/28.a3d2eb13.js"><link rel="prefetch" href="/front-end-blog/assets/js/29.e59d1b01.js"><link rel="prefetch" href="/front-end-blog/assets/js/3.9ff311c9.js"><link rel="prefetch" href="/front-end-blog/assets/js/30.fc88293e.js"><link rel="prefetch" href="/front-end-blog/assets/js/31.d5f04faf.js"><link rel="prefetch" href="/front-end-blog/assets/js/4.159cc123.js"><link rel="prefetch" href="/front-end-blog/assets/js/5.02be0ac6.js"><link rel="prefetch" href="/front-end-blog/assets/js/6.516638f6.js"><link rel="prefetch" href="/front-end-blog/assets/js/7.39aac295.js"><link rel="prefetch" href="/front-end-blog/assets/js/8.484496ac.js"><link rel="prefetch" href="/front-end-blog/assets/js/9.0251467b.js">
+    <link rel="stylesheet" href="/front-end-blog/assets/css/0.styles.b6831af5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/front-end-blog/" class="home-link router-link-active"><img src="/front-end-blog/logo.png" alt="DQ-Blog" class="logo"> <span class="site-name can-hide">DQ-Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/front-end-blog/knowledge/" class="sidebar-heading clickable"><span>Front End</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/front-end-blog/knowledge/[other].html" class="sidebar-link">fregments</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/front-end-blog/thoughts/" class="sidebar-heading clickable router-link-active open"><span>Articles</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/front-end-blog/thoughts/article1.html" class="sidebar-link">【vue】使用v-for渲染的列表如何实现类的动态绑定？ juejin</a></li><li><a href="/front-end-blog/thoughts/article2.html" aria-current="page" class="active sidebar-link">实现文本按照一定高度展开与收起</a></li><li><a href="/front-end-blog/thoughts/article3.html" class="sidebar-link">从 yml 配置文件到 css juejin</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="实现文本按照一定高度展开与收起"><a href="#实现文本按照一定高度展开与收起" class="header-anchor">#</a> 实现文本按照一定高度展开与收起</h1> <h4 id="需求要点"><a href="#需求要点" class="header-anchor">#</a> 需求要点</h4> <ul><li>文本高度固定</li> <li>文本内容长度不固定，可能不能撑满，也可能溢出。</li> <li>若不能撑满，以最小高度展示</li> <li>若溢出，展示「展开」按钮，点击展开全部文本，并展示「收起」按钮，点击「收起」按钮，恢复原样</li></ul> <h5 id="实现方式"><a href="#实现方式" class="header-anchor">#</a> 实现方式</h5> <p><a href="https://github.com/dandanDQ/wonderful-demos" target="_blank" rel="noopener noreferrer">demo地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>：https://github.com/dandanDQ/wonderful-demos</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;div class=&quot;expand-collapse-panel&quot;&gt;
+    &lt;input v-if=&quot;showMoreBtn&quot; type=&quot;checkbox&quot; :id=&quot;id&quot;/&gt;
+    &lt;div class=&quot;text-area&quot; :ref=&quot;id&quot; :style=&quot;{'--height':height+'px'}&quot;&gt;{{text}}&lt;/div&gt;
+     &lt;label v-if=&quot;showMoreBtn&quot; :for=&quot;id&quot; :data-expandtext=&quot;expandText&quot; :data-collaspetext=&quot;collapseText&quot;&gt;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+export default {
+  name: 'expand-collapse-panel',
+  props: {
+    height: {
+      type: Number,
+      default: 100
+    },
+    text: {
+      type: String,
+      default: ''
+    },
+    collapseText: {
+      type: String,
+      default: 'collapse'
+    },
+    expandText: {
+      type: String,
+      default: 'expand'
+    },
+    id: {
+      type: String,
+      default: 'defaultref'
+    }
+  },
+  data(){
+    return {
+      showMoreBtn: false,
+    }
+  },
+  mounted(){
+    this.checkOverflow()
+  },
+  watch:{
+    text:{
+      handler:function (){
+        this.checkOverflow()
+      },
+    }
+  },
+  methods: {
+    checkOverflow () {
+      let el = this.$refs[this.id]
+      if (el) {
+        let isOverflowing = el.scrollHeight &gt; this.height
+        if (!isOverflowing &amp;&amp; el.style) {
+          el.style.height = 'auto'
+        }
+        this.showMoreBtn = isOverflowing
+        return
+      }
+      this.showMoreBtn = false
+      return
+    }
+  }
+}
+&lt;/script&gt;
+&lt;style lang=&quot;less&quot;&gt;
+  .expand-collapse-panel {
+    width: 300px;
+    border: 2px rgba(253, 203, 110, 0.6) solid;
+    box-shadow: 1px 1px 3px rgba(253, 203, 110, 0.5) ;
+    border-radius: 10px;
+    padding: 20px 8px 10px 16px;
+    margin: 10px;
+    text-align: right;
+    .text-area{
+      text-align: left;
+      overflow: hidden;
+      height: var(--height)
+    }
+    input {
+      display: none;
+    }
+    label {
+      margin-left:auto;
+      color: #0984e3;
+      font-size: 12px;
+      border: 1px solid #74b9ff;
+      border-radius: 4px;
+      padding: 2px;
+      line-height: 30px;
+      box-shadow: 1px 1px 2px #74b9ff;
+      
+      &amp;::before {
+        margin-left:auto;
+        padding: 8px;
+        content: attr(data-expandtext);
+      }
+    }
+    input:checked + .text-area {
+      height: auto;
+    }
+
+    input:checked ~ label::before {
+      margin-left:auto;
+      padding: 8px;
+
+      content: attr(data-collaspetext);
+    }
+  }
+&lt;/style&gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/front-end-blog/thoughts/article1.html" class="prev">
+        【vue】使用v-for渲染的列表如何实现类的动态绑定？ juejin
+      </a></span> <span class="next"><a href="/front-end-blog/thoughts/article3.html">
+        从 yml 配置文件到 css juejin
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/front-end-blog/assets/js/app.bfa69435.js" defer></script><script src="/front-end-blog/assets/js/2.a2a73526.js" defer></script><script src="/front-end-blog/assets/js/25.54af57a1.js" defer></script>
+  </body>
+</html>

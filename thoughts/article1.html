@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>【vue】使用v-for渲染的列表如何实现类的动态绑定？ juejin | DQ-Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="A website for front-end article.">
+    <link rel="preload" href="/front-end-blog/assets/css/0.styles.b6831af5.css" as="style"><link rel="preload" href="/front-end-blog/assets/js/app.bfa69435.js" as="script"><link rel="preload" href="/front-end-blog/assets/js/2.a2a73526.js" as="script"><link rel="preload" href="/front-end-blog/assets/js/3.9ff311c9.js" as="script"><link rel="prefetch" href="/front-end-blog/assets/js/10.8ee4114d.js"><link rel="prefetch" href="/front-end-blog/assets/js/11.db04297d.js"><link rel="prefetch" href="/front-end-blog/assets/js/12.a0d5bdc7.js"><link rel="prefetch" href="/front-end-blog/assets/js/13.26a407d8.js"><link rel="prefetch" href="/front-end-blog/assets/js/14.c827638d.js"><link rel="prefetch" href="/front-end-blog/assets/js/15.e229e0ed.js"><link rel="prefetch" href="/front-end-blog/assets/js/16.85c86eb6.js"><link rel="prefetch" href="/front-end-blog/assets/js/17.e437605a.js"><link rel="prefetch" href="/front-end-blog/assets/js/18.b09af370.js"><link rel="prefetch" href="/front-end-blog/assets/js/19.1ce4b80b.js"><link rel="prefetch" href="/front-end-blog/assets/js/20.60920552.js"><link rel="prefetch" href="/front-end-blog/assets/js/21.a7b23cc0.js"><link rel="prefetch" href="/front-end-blog/assets/js/22.37d0720c.js"><link rel="prefetch" href="/front-end-blog/assets/js/23.3d28f8cb.js"><link rel="prefetch" href="/front-end-blog/assets/js/24.2581a37d.js"><link rel="prefetch" href="/front-end-blog/assets/js/25.54af57a1.js"><link rel="prefetch" href="/front-end-blog/assets/js/26.338de9ba.js"><link rel="prefetch" href="/front-end-blog/assets/js/27.31fc6c1b.js"><link rel="prefetch" href="/front-end-blog/assets/js/28.a3d2eb13.js"><link rel="prefetch" href="/front-end-blog/assets/js/29.e59d1b01.js"><link rel="prefetch" href="/front-end-blog/assets/js/30.fc88293e.js"><link rel="prefetch" href="/front-end-blog/assets/js/31.d5f04faf.js"><link rel="prefetch" href="/front-end-blog/assets/js/4.159cc123.js"><link rel="prefetch" href="/front-end-blog/assets/js/5.02be0ac6.js"><link rel="prefetch" href="/front-end-blog/assets/js/6.516638f6.js"><link rel="prefetch" href="/front-end-blog/assets/js/7.39aac295.js"><link rel="prefetch" href="/front-end-blog/assets/js/8.484496ac.js"><link rel="prefetch" href="/front-end-blog/assets/js/9.0251467b.js">
+    <link rel="stylesheet" href="/front-end-blog/assets/css/0.styles.b6831af5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/front-end-blog/" class="home-link router-link-active"><img src="/front-end-blog/logo.png" alt="DQ-Blog" class="logo"> <span class="site-name can-hide">DQ-Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/front-end-blog/knowledge/" class="sidebar-heading clickable"><span>Front End</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/front-end-blog/knowledge/[other].html" class="sidebar-link">fregments</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/front-end-blog/thoughts/" class="sidebar-heading clickable router-link-active open"><span>Articles</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/front-end-blog/thoughts/article1.html" aria-current="page" class="active sidebar-link">【vue】使用v-for渲染的列表如何实现类的动态绑定？ juejin</a></li><li><a href="/front-end-blog/thoughts/article2.html" class="sidebar-link">实现文本按照一定高度展开与收起</a></li><li><a href="/front-end-blog/thoughts/article3.html" class="sidebar-link">从 yml 配置文件到 css juejin</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="【vue】使用v-for渲染的列表如何实现类的动态绑定？-juejin"><a href="#【vue】使用v-for渲染的列表如何实现类的动态绑定？-juejin" class="header-anchor">#</a> 【vue】使用v-for渲染的列表如何实现类的动态绑定？ <a href="https://juejin.im/post/6893139117589463048/" target="_blank" rel="noopener noreferrer">juejin<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h1> <h2 id="需求描述"><a href="#需求描述" class="header-anchor">#</a> 需求描述</h2> <p>最近接到这样一个需求，觉得稍微有些复杂，想分析记录一下。这里简单描述要点。</p> <p>页面上有选择按钮（button），其值有 button-val1 和 button-val2。还有一个选择框（select），后端返回选项值及该值是否存在禁用逻辑。
+现在需要禁用选择框的某些选项，禁用条件是：button 的值为 button-val1，且选项值存在禁用逻辑。
+<strong>也就是说，当button 选择button-val1时，select中select-val2被禁用；选择button-val2 时，select 中所有选项均可用。</strong></p> <img src="/front-end-blog/assets/img/article1-1.51831c69.png" width="400"> <h2 id="细节分析"><a href="#细节分析" class="header-anchor">#</a> 细节分析</h2> <p>option 选项是由后端数据返回渲染的，所以必须使用 v-for 进行渲染，那么怎么在 v-for 中优雅地对每一个选项的样式进行差异化控制呢？
+首选关注禁用逻辑。分为两部分，一是由选项自身决定的，是否存在禁用逻辑，二是由前端按钮选项值决定的。
+这里使用动态 class 绑定解决这个问题。class 绑定为对象，类是否启用，由上述两部分禁用逻辑共同构成。</p> <h2 id="代码实现"><a href="#代码实现" class="header-anchor">#</a> 代码实现</h2> <div class="language- extra-class"><pre class="language-text"><code>&lt;template&gt;
+  &lt;v-app&gt;
+    &lt;v-row&gt;
+      &lt;v-col cols=&quot;1&quot;&gt;
+        &lt;div&gt;button&lt;/div&gt;
+      &lt;/v-col&gt;
+      &lt;v-col cols=&quot;2&quot;&gt;
+        &lt;v-btn-toggle
+          v-model=&quot;button_val&quot;
+          tile
+          color=&quot;deep-purple accent-3&quot;
+          group
+        &gt;
+          &lt;v-btn value=&quot;button_val1&quot;&gt;
+            button_val1
+          &lt;/v-btn&gt;
+          &lt;v-btn value=&quot;button_val2&quot;&gt;
+            button_val2
+          &lt;/v-btn&gt;
+        &lt;/v-btn-toggle&gt;
+      &lt;/v-col&gt;
+    &lt;/v-row&gt;
+    &lt;v-row class=&quot;select&quot;&gt; 
+      &lt;v-col cols=&quot;1&quot;&gt;
+        &lt;div class=&quot;select-res&quot;&gt;option&lt;/div&gt;
+      &lt;/v-col&gt;
+      &lt;v-col cols=&quot;2&quot;&gt;
+        &lt;ul class=&quot;select-options&quot;&gt;
+          &lt;li 
+            v-for=&quot;obj in select_vals&quot;
+            :key=&quot;obj.val&quot;
+            :class=&quot;{'li-disabled':obj.disabled &amp;&amp; disabled_option}&quot;
+          &gt;{{obj.val}}&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/v-col&gt;
+      &lt;/v-row&gt;
+  &lt;/v-app&gt;
+&lt;/template&gt;
+&lt;script&gt;
+
+export default {
+  name:'example',
+  data(){
+    return {
+      select_vals: [{val:'option_val1',disabled:false},{val:'option_val2',disabled:true},{val:'option_val3',disabled:false}],
+      button_val: 2,
+    }
+  },
+  computed:{
+    disabled_option(){
+      return this.button_val === 'button_val1'
+    }
+  }
+}
+&lt;/script&gt;
+&lt;style&gt;
+.li-disabled{
+  background: saddlebrown;
+}
+&lt;/style&gt;
+</code></pre></div><h2 id="实现效果"><a href="#实现效果" class="header-anchor">#</a> 实现效果</h2> <p>button选择button_val2，所有选项均可用</p> <img src="/front-end-blog/assets/img/article1-2.fc02e99e.png" width="400"> <p>button选择button_val2，option_val2选项不可用</p> <img src="/front-end-blog/assets/img/article1-3.c06b6718.png" width="400"> <p>2020-11-09</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/front-end-blog/knowledge/[other].html" class="prev">
+        fregments
+      </a></span> <span class="next"><a href="/front-end-blog/thoughts/article2.html">
+        实现文本按照一定高度展开与收起
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/front-end-blog/assets/js/app.bfa69435.js" defer></script><script src="/front-end-blog/assets/js/2.a2a73526.js" defer></script><script src="/front-end-blog/assets/js/3.9ff311c9.js" defer></script>
+  </body>
+</html>

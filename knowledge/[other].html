@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>fregments | DQ-Blog</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="A website for front-end article.">
+    <link rel="preload" href="/front-end-blog/assets/css/0.styles.b6831af5.css" as="style"><link rel="preload" href="/front-end-blog/assets/js/app.bfa69435.js" as="script"><link rel="preload" href="/front-end-blog/assets/js/2.a2a73526.js" as="script"><link rel="preload" href="/front-end-blog/assets/js/7.39aac295.js" as="script"><link rel="prefetch" href="/front-end-blog/assets/js/10.8ee4114d.js"><link rel="prefetch" href="/front-end-blog/assets/js/11.db04297d.js"><link rel="prefetch" href="/front-end-blog/assets/js/12.a0d5bdc7.js"><link rel="prefetch" href="/front-end-blog/assets/js/13.26a407d8.js"><link rel="prefetch" href="/front-end-blog/assets/js/14.c827638d.js"><link rel="prefetch" href="/front-end-blog/assets/js/15.e229e0ed.js"><link rel="prefetch" href="/front-end-blog/assets/js/16.85c86eb6.js"><link rel="prefetch" href="/front-end-blog/assets/js/17.e437605a.js"><link rel="prefetch" href="/front-end-blog/assets/js/18.b09af370.js"><link rel="prefetch" href="/front-end-blog/assets/js/19.1ce4b80b.js"><link rel="prefetch" href="/front-end-blog/assets/js/20.60920552.js"><link rel="prefetch" href="/front-end-blog/assets/js/21.a7b23cc0.js"><link rel="prefetch" href="/front-end-blog/assets/js/22.37d0720c.js"><link rel="prefetch" href="/front-end-blog/assets/js/23.3d28f8cb.js"><link rel="prefetch" href="/front-end-blog/assets/js/24.2581a37d.js"><link rel="prefetch" href="/front-end-blog/assets/js/25.54af57a1.js"><link rel="prefetch" href="/front-end-blog/assets/js/26.338de9ba.js"><link rel="prefetch" href="/front-end-blog/assets/js/27.31fc6c1b.js"><link rel="prefetch" href="/front-end-blog/assets/js/28.a3d2eb13.js"><link rel="prefetch" href="/front-end-blog/assets/js/29.e59d1b01.js"><link rel="prefetch" href="/front-end-blog/assets/js/3.9ff311c9.js"><link rel="prefetch" href="/front-end-blog/assets/js/30.fc88293e.js"><link rel="prefetch" href="/front-end-blog/assets/js/31.d5f04faf.js"><link rel="prefetch" href="/front-end-blog/assets/js/4.159cc123.js"><link rel="prefetch" href="/front-end-blog/assets/js/5.02be0ac6.js"><link rel="prefetch" href="/front-end-blog/assets/js/6.516638f6.js"><link rel="prefetch" href="/front-end-blog/assets/js/8.484496ac.js"><link rel="prefetch" href="/front-end-blog/assets/js/9.0251467b.js">
+    <link rel="stylesheet" href="/front-end-blog/assets/css/0.styles.b6831af5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/front-end-blog/" class="home-link router-link-active"><img src="/front-end-blog/logo.png" alt="DQ-Blog" class="logo"> <span class="site-name can-hide">DQ-Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/front-end-blog/knowledge/" class="sidebar-heading clickable router-link-active open"><span>Front End</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/front-end-blog/knowledge/[other].html" class="active sidebar-link">fregments</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/front-end-blog/thoughts/" class="sidebar-heading clickable"><span>Articles</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/front-end-blog/thoughts/article1.html" class="sidebar-link">【vue】使用v-for渲染的列表如何实现类的动态绑定？ juejin</a></li><li><a href="/front-end-blog/thoughts/article2.html" class="sidebar-link">实现文本按照一定高度展开与收起</a></li><li><a href="/front-end-blog/thoughts/article3.html" class="sidebar-link">从 yml 配置文件到 css juejin</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="fregments"><a href="#fregments" class="header-anchor">#</a> fregments</h1> <h4 id="base-64"><a href="#base-64" class="header-anchor">#</a> base 64</h4> <p>base 64 基于 64 个 ASCII码 2的6次方
+编码方式： 3 * 8bit -&gt; 4 * 6bit，每个6bit前增加2个0，转码前长度：转码后长度=3：4
+当长度不是3的倍数时，原文剩余的字节根据编码规则继续单独转(1变2，2变3；不够的位数用0补全)，再用=号补满4个字节。这就是为什么有些Base64编码会以一个或两个等号结束的原因，但等号最多只有两个。</p> <p>例子：
+转换前 10101101,10111010,01110110
+转换后 00101011, 00011011 ,00101001 ,00110110
+十进制 43 27 41 54
+对应码表中的值 r b p 2
+所以上面的24位编码，编码后的Base64值为 rbp2</p> <p>Javascript 实现 base64 编解码</p> <div class="language- extra-class"><pre class="language-text"><code>if (!Shotgun)
+    var Shotgun = {};
+if (!Shotgun.Js)
+    Shotgun.Js = {};
+Shotgun.Js.Base64 = {
+    _table: [
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+        'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f',
+        'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
+        'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/'
+    ],
+  
+    encode: function (bin) {
+        var codes = [];
+        var un = 0;
+        un = bin.length % 3;
+        // 补齐 bin 长度
+        if (un == 1)
+            bin.push(0, 0);
+        else if (un == 2)
+            bin.push(0);
+        for (var i = 2; i &lt; bin.length; i += 3) {
+            var c = bin[i - 2] &lt;&lt; 16;
+            c |= bin[i - 1] &lt;&lt; 8;
+            c |= bin[i];
+            // c：二进制长度为24的数据
+            // 0x3f: 111111 六位掩码
+            codes.push(this._table[c &gt;&gt; 18 &amp; 0x3f]);
+            codes.push(this._table[c &gt;&gt; 12 &amp; 0x3f]);
+            codes.push(this._table[c &gt;&gt; 6 &amp; 0x3f]);
+            codes.push(this._table[c &amp; 0x3f]);
+        }
+        if (un &gt;= 1) {
+            codes[codes.length - 1] = &quot;=&quot;;
+            bin.pop();
+        }
+        if (un == 1) {
+            codes[codes.length - 2] = &quot;=&quot;;
+            bin.pop();
+        }
+        return codes.join(&quot;&quot;);
+    },
+    decode: function (base64Str) {
+        var i = 0;
+        var bin = [];
+        var x = 0, code = 0, eq = 0;
+        while (i &lt; base64Str.length) {
+            var c = base64Str.charAt(i++);
+            var idx = this._table.indexOf(c);
+            if (idx == -1) {
+                switch (c) {
+                    case '=': idx = 0; eq++; break;
+                    case ' ':
+                    case '\n':
+                    case &quot;\r&quot;:
+                    case '\t':
+                        continue;
+                    default:
+                        throw { &quot;message&quot;: &quot;\u0062\u0061\u0073\u0065\u0036\u0034\u002E\u0074\u0068\u0065\u002D\u0078\u002E\u0063\u006E\u0020\u0045\u0072\u0072\u006F\u0072\u003A\u65E0\u6548\u7F16\u7801\uFF1A&quot; + c };
+                }
+            }
+            if (eq &gt; 0 &amp;&amp; idx != 0)
+                throw { &quot;message&quot;: &quot;\u0062\u0061\u0073\u0065\u0036\u0034\u002E\u0074\u0068\u0065\u002D\u0078\u002E\u0063\u006E\u0020\u0045\u0072\u0072\u006F\u0072\u003A\u7F16\u7801\u683C\u5F0F\u9519\u8BEF\uFF01&quot; };
+  
+            code = code &lt;&lt; 6 | idx;
+            if (++x != 4)
+                continue;
+            bin.push(code &gt;&gt; 16);
+            bin.push(code &gt;&gt; 8 &amp; 0xff);
+            bin.push(code &amp; 0xff)
+            code = x = 0;
+        }
+        if (code != 0)
+            throw { &quot;message&quot;: &quot;\u0062\u0061\u0073\u0065\u0036\u0034\u002E\u0074\u0068\u0065\u002D\u0078\u002E\u0063\u006E\u0020\u0045\u0072\u0072\u006F\u0072\u003A\u7F16\u7801\u6570\u636E\u957F\u5EA6\u9519\u8BEF&quot; };
+        if (eq == 1)
+            bin.pop();
+        else if (eq == 2) {
+            bin.pop();
+            bin.pop();
+        } else if (eq &gt; 2)
+            throw { &quot;message&quot;: &quot;\u0062\u0061\u0073\u0065\u0036\u0034\u002E\u0074\u0068\u0065\u002D\u0078\u002E\u0063\u006E\u0020\u0045\u0072\u0072\u006F\u0072\u003A\u7F16\u7801\u683C\u5F0F\u9519\u8BEF\uFF01&quot; };
+  
+        return bin;
+    }
+};
+</code></pre></div><h4 id="encodeuri-vs-encodeuricomponent"><a href="#encodeuri-vs-encodeuricomponent" class="header-anchor">#</a> encodeURI vs encodeURIComponent</h4> <p>区别：如名字
+编码上的差异：
+<img src="/front-end-blog/assets/img/encode.a559982c.png" width="300"></p> <h4 id="常用的正则表达式"><a href="#常用的正则表达式" class="header-anchor">#</a> 常用的正则表达式</h4> <p>两位小数
+const validRule = /^\d+(.[0-9]{1,2})?$/</p> <h4 id="vue组件单元测试"><a href="#vue组件单元测试" class="header-anchor">#</a> vue组件单元测试</h4> <p>单元测试会封闭执行最小化单元的代码，使得添加新功能和追踪问题更容易。
+好处：</p> <ul><li>提供描述组件行为的文档</li> <li>节省手动测试的时间</li> <li>减少研发新特性时产生的 bug</li> <li>改进设计</li> <li>促进重构</li></ul> <p>toMatchObject</p> <h4 id="费曼学习法"><a href="#费曼学习法" class="header-anchor">#</a> 费曼学习法</h4> <p>运用费曼技巧。你只需要花上20分钟就能深入理解知识点
+把它教给一个小孩子；回顾；将语言简化、条理化；传授</p> <h4 id="彼得原理"><a href="#彼得原理" class="header-anchor">#</a> 彼得原理</h4> <p>在组织或企业的等级制度中，人会因其某种特质或特殊技能，令他被擢升到不能胜任的高阶职位，相反能干的人才也可能因为不符组织的章程而反被踢出，最终留下的人都变成组织的障碍物（冗员）及负资产。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/front-end-blog/thoughts/article1.html">
+        【vue】使用v-for渲染的列表如何实现类的动态绑定？ juejin
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/front-end-blog/assets/js/app.bfa69435.js" defer></script><script src="/front-end-blog/assets/js/2.a2a73526.js" defer></script><script src="/front-end-blog/assets/js/7.39aac295.js" defer></script>
+  </body>
+</html>
